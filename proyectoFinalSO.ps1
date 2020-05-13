@@ -40,7 +40,7 @@ do
                 $freePhysicalMem = $system.FreePhysicalMemory
                 $usedPhysicalMem = $totalPhysicalMem - $freePhysicalMem
                 $usedPhysicalMemPct = [math]::Round(($usedPhysicalMem / $totalPhysicalMem) * 100,1)
-                $freePhysicalMemPct = 100 - ([math]::Round(($usedPhysicalMem / $totalPhysicalMem) * 100,1))
+                $freePhysicalMemPct = 100 - $usedPhysicalMemPct
                 "Memoria Libre: $freePhysicalMem bytes"
                 "Memoria libre en porcentaje: $freePhysicalMemPct %"
                 "Memoria en uso en porcentaje: $usedPhysicalMemPct %"
